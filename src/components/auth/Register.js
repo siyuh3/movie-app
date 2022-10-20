@@ -5,8 +5,6 @@ import {register} from "../../actions/auth";
 import {useDispatch, useSelector} from "react-redux";
 
 const Register = () => {
-    const dispatch = useDispatch();
-    const isAuthenticated = useSelector(state => state.auth.isAuthenticated);
     const [formData, setFormData] = useState({
         name: '',
         type: 'general',
@@ -15,6 +13,10 @@ const Register = () => {
         password: '',
         password2: ''
     });
+
+    const isAuthenticated = useSelector(state => state.auth.isAuthenticated);
+
+    const dispatch = useDispatch();
 
     const { name, type, code, email, password, password2} = formData;
 
@@ -28,8 +30,7 @@ const Register = () => {
         e.preventDefault();
         if (password !== password2) {
             setAlert(dispatch, "Passwords do not match!", "danger");
-        }
-        else {
+        } else {
             await register(dispatch, {name, type, code, email, password});
         }
     }
@@ -43,7 +44,7 @@ const Register = () => {
             <h1 className="wd-large text-primary mt-3">Sign Up</h1>
             <p className="wd-lead"><i className="fas fa-user"/> Create Your Account</p>
             <div className="mt-4">
-                * Before registration, please read our privacy content. <Link to="/privacy">Privacy</Link>
+                * Please read our privacy policy before registering on the site. <Link to="/privacy">Privacy</Link>
             </div>
             <form className="form" onSubmit={e=>onSubmit(e)}>
                 <div className="form-group">
