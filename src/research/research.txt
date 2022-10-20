@@ -1,0 +1,20 @@
+Movie Hub
+Movie search engines and movie review platforms provide rich movie resources and reviews to users, however, limited user
+interaction functionalities enabled by the platforms makes it hard to keep users more engaged and maintain user
+retention rate. Moreover, due to lack of high-quality movie review articles composed by professional critics,
+users might not be able to get decent and thorough feedback of movies from the platforms. Our project, Movie Hub aims to
+solve these existing problems.
+
+
+Product Research
+IMDB: https://www.imdb.com/
+Rotten Tomatoes: https://www.rottentomatoes.com
+
+Technical Research
+React: https://reactjs.org
+Node.js: https://nodejs.org/en/
+Privacy page: https://termly.io
+Database: https://www.mongodb.com
+
+
+
